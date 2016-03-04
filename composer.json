@@ -1,0 +1,17 @@
+{
+  "name": "julien731/wp-dismissible-notices-handler",
+  "description": "A simple library to handle Ajax-dismissible admin notices for WordPress",
+  "homepage": "https://github.com/julien731/WP-Dismissible-Notices-Handler",
+  "license": "GNU GPL",
+  "authors": [
+    {
+      "name": "Julien Liabeuf",
+      "email": "julien@liabeuf.fr",
+      "homepage": "https://julienliabeuf.com",
+      "role": "Lead Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0"
+  }
+}
