@@ -1,5 +1,7 @@
 # WordPress Dismissible Notices Handler
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/julien731/WP-Dismissible-Notices-Handler/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/julien731/WP-Dismissible-Notices-Handler/?branch=master)
+
 Since version 4.2, WordPress has a built-in mechanism for handling dismissible admin notices. While this mechanism handles dismissing notices, the dismissal isn't persistent. This means that a user would see the notice on every page load, even though he or she dismissed the notice already.
 
 What the Dismissible Notices Handler (DNH) library does is handle the persistent part of dismissing admin notices.
