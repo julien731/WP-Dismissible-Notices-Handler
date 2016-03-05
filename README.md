@@ -29,9 +29,9 @@ This function takes 3 parameters:
 
 Registering an admin notice would look like that:
 
-`
+```
 dnh_register_notice( 'my_notice', 'updated', 'This is my notice' );
-`
+```
 
 ## Advanced Parameters
 
@@ -41,6 +41,6 @@ Hereafter is the list of available parameters to be passed in the `$args` array.
 
 | Parameter | Possible Value(s)        | Default | Description                                                                                                                                                                                                                                             |
 |-----------|--------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| scope     | user, global             | user    | Whether the notice should be dismissed for the current user only or globally on the site. A notice dismissed for a user will still shop up for other users, while a notice dismissed globally will not be displayed anymore after being dismissed once. |
+| scope     | user, global             | user    | Whether the notice should be dismissed for the current user only or globally on the site. A notice dismissed for a user will still show up for other users, while a notice dismissed globally will not be displayed anymore after being dismissed once. |
 | cap       | Any WordPress capability |         | If not empty, the handler will check if the current user has the specified before displaying the notice.                                                                                                                                                |
 | class     | string                   |         | Additional class to add to the notice wrapper                                                                                                                                                                                                           |      |                   |             |
