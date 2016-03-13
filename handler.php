@@ -91,14 +91,14 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 
 			// Make sure WordPress is compatible
 			if ( ! self::$instance->is_wp_compatible() ) {
-				self::$instance->spit_error( sprintf( 'The library can not be used because your version of WordPress is too old. You need version %s at least.', self::$instance->wordpress_version_required ) );
+				self::$instance->spit_error( sprintf( __( 'The library can not be used because your version of WordPress is too old. You need version %s at least.' ), self::$instance->wordpress_version_required ) );
 
 				return;
 			}
 
 			// Make sure PHP is compatible
 			if ( ! self::$instance->is_php_compatible() ) {
-				self::$instance->spit_error( sprintf( 'The library can not be used because your version of PHP is too old. You need version %s at least.', self::$instance->php_version_required ) );
+				self::$instance->spit_error( sprintf( __( 'The library can not be used because your version of PHP is too old. You need version %s at least.' ), self::$instance->php_version_required ) );
 
 				return;
 			}
@@ -213,7 +213,7 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 		 * @return void
 		 */
 		protected function spit_error( $error ) {
-			printf( '<div style="margin: 20px; text-align: center;"><strong>%1$s</strong> %2$s</pre></div>', 'Dismissible Notices Handler Error:', wp_kses_post( $error ) );
+			printf( '<div style="margin: 20px; text-align: center;"><strong>%1$s</strong> %2$s</pre></div>', __( 'Dismissible Notices Handler Error:' ), wp_kses_post( $error ) );
 		}
 
 		/**
@@ -290,7 +290,7 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 
 			if ( array_key_exists( $id, self::$instance->notices ) ) {
 
-				self::$instance->spit_error( sprintf( 'A notice with the ID %s has already been registered.', "<code>$id</code>" ) );
+				self::$instance->spit_error( sprintf( __( 'A notice with the ID %s has already been registered.' ), "<code>$id</code>" ) );
 
 				return false;
 			}
