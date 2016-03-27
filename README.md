@@ -30,7 +30,7 @@ This function takes 3 parameters:
 Registering an admin notice would look like that:
 
 ```
-dnh_register_notice( 'my_notice', 'updated', 'This is my notice' );
+dnh_register_notice( 'my_notice', 'updated', __( 'This is my notice' ) );
 ```
 
 ## Advanced Parameters
