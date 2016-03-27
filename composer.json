@@ -13,5 +13,8 @@
   ],
   "require": {
     "php": ">=5.5.0"
+  },
+  "autoload": {
+    "files": ["handler.php"]
   }
 }
