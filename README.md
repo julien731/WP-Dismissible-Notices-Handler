@@ -25,6 +25,14 @@ This function takes 3 parameters:
 - `$content` *(string)*: the content of the admin notice
 - `$args` *(array)*: additional parameters that can be passed to the notice handler (see below)
 
+#### Installation
+
+The simpest way to use DNH is to add it as a Composer dependency:
+
+```
+composer require julien731/wp-dismissible-notices-handler
+```
+
 ### Example
 
 Registering an admin notice would look like that:
