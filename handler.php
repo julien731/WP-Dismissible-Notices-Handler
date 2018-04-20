@@ -16,7 +16,7 @@
  * @version   1.1
  * @license   GPL-2.0+
  * @link      https://julienliabeuf.com
- * @copyright 2016 Julien Liabeuf
+ * @copyright 2018 Julien Liabeuf
  */
 
 // If this file is called directly, abort.
