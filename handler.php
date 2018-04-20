@@ -256,6 +256,11 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 			$types = array(
 				'error',
 				'updated',
+				// New types of notification style.
+				'notice-error',
+				'notice-warning',
+				'notice-success',
+				'notice-info',
 			);
 
 			return apply_filters( 'dnh_notice_types', $types );
