@@ -110,8 +110,6 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 				return;
 			}
 
-			self::$instance->includes();
-
 			add_action( 'admin_notices', array( self::$instance, 'display' ) );
 			add_action( 'admin_print_scripts', array( self::$instance, 'load_script' ) );
 			add_action( 'wp_ajax_dnh_dismiss_notice', array( self::$instance, 'dismiss_notice_ajax' ) );
@@ -148,16 +146,6 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 
 			return true;
 
-		}
-
-		/**
-		 * Include all our files
-		 *
-		 * @since 1.0
-		 * @return void
-		 */
-		private function includes() {
-			require( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'includes/helper-functions.php' );
 		}
 
 		/**
