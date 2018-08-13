@@ -19,11 +19,6 @@
  * @copyright 2018 Julien Liabeuf
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
-
 if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 
 	final class Dismissible_Notices_Handler {
@@ -56,7 +51,7 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 		 * @since 1.0
 		 * @var string
 		 */
-		public $wordpress_version_required = '4.2';
+		public $wordpress_version_required = '4.7';
 
 		/**
 		 * @var array Holds all our registered notices
@@ -617,23 +612,5 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 		}
 
 	}
-
-	/**
-	 * The main function responsible for returning the unique Dismissible Notices Handler instance
-	 *
-	 * Use this function like you would a global variable, except without needing
-	 * to declare the global.
-	 *
-	 * @since 1.0
-	 * @return object Dismissible_Notices_Handler
-	 */
-	function DNH() {
-		return Dismissible_Notices_Handler::instance();
-	}
-
-	/**
-	 * Get the library running
-	 */
-	DNH();
 
 }
