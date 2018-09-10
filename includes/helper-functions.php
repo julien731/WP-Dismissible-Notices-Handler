@@ -17,9 +17,17 @@
  * @copyright 2016 Julien Liabeuf
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+/**
+ * The main function responsible for returning the unique Dismissible Notices Handler instance
+ *
+ * Use this function like you would a global variable, except without needing
+ * to declare the global.
+ *
+ * @since 1.0
+ * @return object Dismissible_Notices_Handler
+ */
+function DNH() {
+	return Dismissible_Notices_Handler::instance();
 }
 
 /**
@@ -40,6 +48,11 @@ function dnh_register_notice( $id, $type, $content, $args = array() ) {
 		return false;
 	}
 
+	/**
+	 * Get the library running
+	 */
+	DNH();
+
 	return DNH()->register_notice( $id, $type, $content, $args );
 
 }
@@ -59,6 +72,11 @@ function dnh_restore_notice( $id ) {
 		return false;
 	}
 
+	/**
+	 * Get the library running
+	 */
+	DNH();
+
 	return DNH()->restore_notice( $id );
 
 }
@@ -77,6 +95,11 @@ function dnh_is_dismissed( $id ) {
 	if ( ! function_exists( 'DNH' ) ) {
 		return false;
 	}
+
+	/**
+	 * Get the library running
+	 */
+	DNH();
 
 	return DNH()->is_dismissed( $id );
 
