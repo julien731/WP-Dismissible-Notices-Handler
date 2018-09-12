@@ -13,7 +13,7 @@
  *
  * @package   Dismissible Notices Handler
  * @author    Julien Liabeuf <julien@liabeuf.fr>
- * @version   1.1
+ * @version   1.2.0
  * @license   GPL-2.0+
  * @link      https://julienliabeuf.com
  * @copyright 2018 Julien Liabeuf
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 		 * @since 1.0
 		 * @var string
 		 */
-		public $version = '1.1';
+		public $version = '1.2.0';
 
 		/**
 		 * Required version of PHP.
