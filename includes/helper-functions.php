@@ -26,6 +26,11 @@
  * @since 1.0
  * @return object Dismissible_Notices_Handler
  */
+
+if ( function_exists( 'DNH' ) ) {
+	return;	
+}
+
 function DNH() {
 	return Dismissible_Notices_Handler::instance();
 }
