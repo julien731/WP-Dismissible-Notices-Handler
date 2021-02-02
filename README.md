@@ -18,7 +18,7 @@ The basics of it is to register a new admin notice. You really need 3 things for
 
 There is a handy helper function available for notice registration: `dnh_register_notice()`
 
-This function takes 3 parameters:
+This function takes 4 parameters:
 
 - `$id` *(string)*: the unique ID of the notice
 - `$type` *(string)*: the type of notice you want to display. Currently it can be `error` for an error notice or `updated` for a success/update notice
@@ -43,7 +43,7 @@ dnh_register_notice( 'my_notice', 'updated', __( 'This is my notice' ) );
 
 ## Advanced Parameters
 
-The function takes an array of optional parameters allowing more control over the notices and how they're dismissed. Only 2 parameters are available so far but hopefully more will be coming soon.
+The function takes an array of optional parameters allowing more control over the notices and how they're dismissed. Only 3 parameters are available so far but hopefully more will be coming soon.
 
 Hereafter is the list of available parameters to be passed in the `$args` array. Please note that the `$args` parameter is optional.
 
