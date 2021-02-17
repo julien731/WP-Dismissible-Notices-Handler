@@ -14,7 +14,9 @@ We Use [Gitflow](https://jeffkreeftmeijer.com/git-flow/) so all code changes hap
 3. If you've changed APIs, update the documentation.
 4. Ensure the test suite passes.
 5. Make sure your code lints.
-6. Issue that pull request! **Make sure to use a descriptive title for your PR.**
+6. Issue that pull request!
+    - **Make sure to use a descriptive title for your PR.**
+    - Make use of the available labels to identify the type of PR that you're opening
 
 ## Code of Conduct
 
