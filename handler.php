@@ -35,7 +35,7 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 		 * @since 1.0
 		 * @var string
 		 */
-		public $version = '1.2.1';
+		public $version = '1.2.2';
 
 		/**
 		 * Required version of PHP.
