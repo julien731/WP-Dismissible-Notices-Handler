@@ -27,85 +27,89 @@
  * @return object Dismissible_Notices_Handler
  */
 
-if ( function_exists( 'DNH' ) ) {
-	return;	
-}
-
-function DNH() {
-	return Dismissible_Notices_Handler::instance();
-}
-
-/**
- * Register a new notice
- *
- * @since 1.0
- *
- * @param string $id      Notice ID, used to identify it
- * @param string $type    Type of notice to display
- * @param string $content Notice content
- * @param array  $args    Additional parameters
- *
- * @return bool
- */
-function dnh_register_notice( $id, $type, $content, $args = array() ) {
-
-	if ( ! function_exists( 'DNH' ) ) {
-		return false;
+if ( ! function_exists( 'DNH' ) ) {
+	function DNH() {
+		return Dismissible_Notices_Handler::instance();
 	}
-
-	/**
-	 * Get the library running
-	 */
-	DNH();
-
-	return DNH()->register_notice( $id, $type, $content, $args );
-
 }
 
-/**
- * Restore a previously dismissed notice
- *
- * @since 1.0
- *
- * @param string $id ID of the notice to restore
- *
- * @return bool
- */
-function dnh_restore_notice( $id ) {
-
-	if ( ! function_exists( 'DNH' ) ) {
-		return false;
-	}
-
+if ( ! function_exists( 'dnh_register_notice' ) ) {
 	/**
-	 * Get the library running
+	 * Register a new notice
+	 *
+	 * @since 1.0
+	 *
+	 * @param string $id      Notice ID, used to identify it
+	 * @param string $type    Type of notice to display
+	 * @param string $content Notice content
+	 * @param array  $args    Additional parameters
+	 *
+	 * @return bool
 	 */
-	DNH();
+	function dnh_register_notice( $id, $type, $content, $args = array() ) {
 
-	return DNH()->restore_notice( $id );
+		if ( ! function_exists( 'DNH' ) ) {
+			return false;
+		}
 
+		/**
+		 * Get the library running
+		 */
+		DNH();
+
+		return DNH()->register_notice( $id, $type, $content, $args );
+
+	}
 }
 
-/**
- * Check if a notice has been dismissed
- *
- * @since 1.0
- *
- * @param string $id ID of the notice to check
- *
- * @return bool
- */
-function dnh_is_dismissed( $id ) {
-
-	if ( ! function_exists( 'DNH' ) ) {
-		return false;
-	}
-
+if ( ! function_exists( 'dnh_restore_notice' ) ) {
 	/**
-	 * Get the library running
+	 * Restore a previously dismissed notice
+	 *
+	 * @since 1.0
+	 *
+	 * @param string $id ID of the notice to restore
+	 *
+	 * @return bool
 	 */
-	DNH();
+	function dnh_restore_notice( $id ) {
 
-	return DNH()->is_dismissed( $id );
+		if ( ! function_exists( 'DNH' ) ) {
+			return false;
+		}
 
+		/**
+		 * Get the library running
+		 */
+		DNH();
+
+		return DNH()->restore_notice( $id );
+
+	}
+}
+
+if ( ! function_exists( 'dnh_is_dismissed' ) ) {
+	/**
+	 * Check if a notice has been dismissed
+	 *
+	 * @since 1.0
+	 *
+	 * @param string $id ID of the notice to check
+	 *
+	 * @return bool
+	 */
+	function dnh_is_dismissed( $id ) {
+
+		if ( ! function_exists( 'DNH' ) ) {
+			return false;
+		}
+
+		/**
+		 * Get the library running
+		 */
+		DNH();
+
+		return DNH()->is_dismissed( $id );
+
+	}
 }
