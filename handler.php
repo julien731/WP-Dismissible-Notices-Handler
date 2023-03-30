@@ -293,14 +293,15 @@ if ( ! class_exists( 'Dismissible_Notices_Handler' ) ) {
 			$args    = wp_parse_args( $args, self::$instance->default_args() );
 
 			if ( array_key_exists( $id, self::$instance->notices ) ) {
-
-				self::$instance->spit_error(
-					sprintf(
-						/* translators: %s: required php version */
-						esc_html__( 'A notice with the ID %s has already been registered.', 'wp-dismissible-notices-handler' ),
-						"<code>$id</code>"
-					)
-				);
+				if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+					self::$instance->spit_error(
+						sprintf(
+							/* translators: %s: required php version */
+							esc_html__( 'A notice with the ID %s has already been registered.', 'wp-dismissible-notices-handler' ),
+							"<code>$id</code>"
+						)
+					);
+				}
 
 				return false;
 			}
